@@ -2,7 +2,7 @@ name: Deploy react app # Nombre del flujo de trabajo
 on: # Nos permite crear eventos, en este caso las acciones se realizarán cuando se detecten cambios en la rama main
   push:
     branches:
-      - main  
+      - master  
 jobs:
   deploy:
     name: deploy app
