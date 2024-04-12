@@ -2,27 +2,26 @@ name: Deploy react app # Nombre del flujo de trabajo
 on: # Nos permite crear eventos, en este caso las acciones se realizarán cuando se detecten cambios en la rama main
   push:
     branches:
-      - master  
+      - master  # Se activará cuando se hagan cambios en la rama master
 jobs:
   deploy:
-    name: deploy app
-    runs-on: ubuntu-lastest
+    name: deploy app # Nombre del trabajo
+    runs-on: ubuntu-latest # El trabajo se ejecutará en un corredor con la última versión de Ubuntu
     strategy:
       matrix:
-        node-version: [ "12.x" ]
+        node-version: [ "12.x" ] # Se utilizará la versión 12.x de Node.js
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2 # Acción para comprobar el repositorio
+      - uses: actions/setup-node@v1 # Acción para configurar Node.js
         with:
-          node-version: ${{matrix.node-version}}
-        - name: install packages
-          run:  npm install
-        - name: registry github user
-        run: /
-            git config --global user.email <email>
-            git config --global user.name <name>
-        - name: deploy the app
-        run: npm run deploy
+          node-version: ${{matrix.node-version}} # Se utiliza la versión de Node.js especificada anteriormente
+      - name: install packages # Nombre del paso
+        run:  npm install # Comando para instalar los paquetes necesarios
+      - name: registry github user # Nombre del paso
+        run: |
+            git config --global user.email "<email>" # Configura el correo electrónico del usuario de GitHub
+            git config --global user.name "<name>" # Configura el nombre del usuario de GitHub
+      - name: deploy the app # Nombre del paso
+        run: npm run deploy # Comando para desplegar la aplicación
         env:
-          DEPLOY_GHPAGES: ${{ secrets.DEPLOY_GHPAGES }}
-      
+          DEPLOY_GHPAGES: ${{ secrets.DEPLOY_GHPAGES }} # Variable de entorno para el despliegue
