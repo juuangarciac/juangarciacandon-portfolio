@@ -1,8 +1,11 @@
 import GeneralCompetencesLogo from '../img/LogoCard_CompetenciaGeneral_es.png'
 import SpecificCompetencesLogo from '../img/LogoCard_CompetenciaEspecifica_es.png'
 import { Competences } from "../data/Competences";
+import { useEffect, useState } from 'react';
 
 export const Curriculum = () => {
+
+    const [data, setData] = useState([]);
 
     const classifyCompetence = (competence) => {
         if(competence.name === "GeneralCompetence") {
@@ -14,15 +17,35 @@ export const Curriculum = () => {
         }
     }
 
+    const loadData = (competenceType) => {
+        if(competenceType === "all") {
+            setData(Competences);
+        } else {
+            const filteredCompetences = Competences.filter(competence => competence.name === competenceType);
+            setData(filteredCompetences);
+        }
+        console.log(data);
+    }
+
+    useEffect(() => {
+        setData(Competences)
+    }, []);
+
   return (
     <div className="container-fluid">
+
         <h1 className="h1">Curriculum</h1>
 
-          <h2 className="h2 m-2">Competencias</h2>
+        <h1 className="h2">Competencias</h1>
+          <section>
+                <button type="button" onClick={() => loadData("all")} class="btn btn-primary btn-lg btn-block">Todas</button>
+                <button type="button" onClick={() => loadData("GeneralCompetence")} class="btn btn-primary btn-lg btn-block">Competencias Generales</button>
+                <button type="button" onClick={() => loadData("SpecificCompetence")} class="btn btn-primary btn-lg btn-block">Competencias Específicas</button>
+          </section>
 
           <section className="row justify-content-center">
-            {Competences ? (
-              Competences.map((competence) => (
+            {data ? (
+              data.map((competence) => (
                 <div id={competence.id} class="card col-sm-8 m-sm-4 col-md-4 m-md-4 col-lg-3 m-lg-4 col-xl-2 m-xl-4 justify-content-center">
                     <img src={classifyCompetence(competence).src}  class="card-img-top" alt={classifyCompetence(competence).alt}></img>
                   <div class="card-body">
@@ -35,9 +58,6 @@ export const Curriculum = () => {
             )}
           </section>
           
-          
-          <h3 className="h3 m-3"> Competencias Específicas</h3>
-          <h3 className="h3 m-3"> Competencias Tecnologías de la Información</h3>
     </div>
   );
 };
