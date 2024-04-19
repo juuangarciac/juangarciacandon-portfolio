@@ -14,6 +14,8 @@ export const Approuter = () => {
 
             <Header />
 
+            
+
         <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/curriculum" element={<Curriculum />} />
