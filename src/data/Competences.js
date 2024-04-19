@@ -35,13 +35,43 @@ export const Competences = [
     description: "Capacidad para analizar y valorar el impacto social y medioambiental de las soluciones técnicas, comprendiendo la responsabilidad ética y profesional de la actividad del Ingeniero Técnico en Informática."
   },
   {
-    id: "",
+    id: "6",
     name: "SpecificCompetence",
-    description: ""
+    description: "Capacidad para diseñar, desarrollar, seleccionar y evaluar aplicaciones y sistemas informáticos, asegurando su fiabilidad, seguridad y calidad, conforme a principios éticos y a la legislación y normativa vigente."
   },
   {
-    id: "",
+    id: "7",
     name: "SpecificCompetence",
-    description: ""
+    description: "Capacidad para comprender la importancia de la negociación, los hábitos de trabajo efectivos, el liderazgo y las habilidades de comunicación en todos los entornos de desarrollo de software."
+  },
+  {
+    id: "8",
+    name: "SpecificCompetence",
+    description: "Conocimiento, administración y mantenimiento sistemas, servicios y aplicaciones informáticas."
+  },
+  {
+    id: "9",
+    name: "SpecificCompetence",
+    description: "Conocimiento, diseño y utilización de forma eficiente los tipos y estructuras de datos más adecuados a la resolución de un problema."
+  },
+  {
+    id: "10",
+    name: "SpecificCompetence",
+    description: "Conocimiento, diseño y utilización de forma eficiente los tipos y estructuras de datos más adecuados a la resolución de un problema."
+  },
+  {
+    id: "10",
+    name: "SpecificCompetence",
+    description: "Conocimiento y aplicación de las características, funcionalidades y estructura de las bases de datos, que permitan su adecuado uso, y el diseño y el análisis e implementación de aplicaciones basadas en ellos."
+  },
+  {
+    id: "11",
+    name: "SpecificCompetence",
+    description: "	Conocimiento y aplicación de los principios, metodologías y ciclos de vida de la ingeniería de software."
+  },
+  {
+    id: "12",
+    name: "SpecificCompetence",
+    description : "Capacidad para diseñar y evaluar interfaces persona computador que garanticen la accesibilidad y usabilidad a los sistemas, servicios y aplicaciones informáticas."
   }
 ];
