@@ -8,7 +8,7 @@ export const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container col-6">
           <NavLink className="navbar-brand" to="/">
-            <img src={Logo} alt="Logo" height={'60px'}/>
+            <img src={Logo} alt="Logo" height={'30px'}/>
           </NavLink>
         </div>
 
