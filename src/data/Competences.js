@@ -60,11 +60,6 @@ export const Competences = [
     description: "Conocimiento, diseño y utilización de forma eficiente los tipos y estructuras de datos más adecuados a la resolución de un problema."
   },
   {
-    id: "10",
-    name: "SpecificCompetence",
-    description: "Conocimiento y aplicación de las características, funcionalidades y estructura de las bases de datos, que permitan su adecuado uso, y el diseño y el análisis e implementación de aplicaciones basadas en ellos."
-  },
-  {
     id: "11",
     name: "SpecificCompetence",
     description: "	Conocimiento y aplicación de los principios, metodologías y ciclos de vida de la ingeniería de software."
