@@ -2,9 +2,22 @@ import GeneralCompetencesLogo from "../img/LogoCard_CompetenciaGeneral_es.png";
 import SpecificCompetencesLogo from "../img/LogoCard_CompetenciaEspecifica_es.png";
 import { Competences } from "../data/Competences";
 import { useEffect, useState } from "react";
+import { flushSync } from "react-dom";
 
 export const Curriculum = () => {
+  
   const [data, setData] = useState([]);
+  
+  const [checkBox, setcheckBox] = useState([
+    {
+      name: "GeneralCompetence",
+      checked: false
+    },
+    {
+      name: "SpecificCompetence",
+      checked: false
+    }
+  ]);
 
   const classifyCompetence = (competence) => {
     if (competence.name === "GeneralCompetence") {
@@ -16,21 +29,32 @@ export const Curriculum = () => {
     }
   };
 
-  const loadData = (competenceType) => {
-    if (competenceType === "all") {
-      setData(Competences);
-    } else {
-      const filteredCompetences = Competences.filter(
+  let loadData = (competenceType) => {
+
+    let filteredCompetences = [];
+    let data = [];
+    if(competenceType === "GeneralCompetence"){
+      filteredCompetences = Competences.filter(
         (competence) => competence.name === competenceType
       );
-      setData(filteredCompetences);
+      
     }
+
+    if(competenceType === "SpecificCompetence"){
+      filteredCompetences = filteredCompetences.filter(
+        (competence) => competence.name === competenceType
+      );
+    }
+
+    setData(filteredCompetences);
     console.log(data);
   };
 
   useEffect(() => {
-    setData(Competences);
-  }, []);
+    for(let i = 0; i < checkBox.length ; i++){
+        if(checkBox[i].checked) loadData(checkBox.name);
+    }
+  }, checkBox);
 
   return (
     <div className="container-fluid">
@@ -42,7 +66,7 @@ export const Curriculum = () => {
             <h5 className="h5">Filtrar por:</h5>
             <div class="form-check">
               <label class="form-check-label">
-                <h6 className="h6">tipo de competencia</h6>
+                <h6 className="h6">Tipo de competencia</h6>
                 <input type="checkbox" class="form-check-input" name="competenciasGenerales" id="competenciasGenerales" value="checkedValue"/>
                 Competencias Generales
               </label>
@@ -50,53 +74,16 @@ export const Curriculum = () => {
                 <input type="checkbox" class="form-check-input" name="competenciasEspecificas" id="competenciasEspecificas" value="checkedValue"/>
                 Competencias Específicas
               </label>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="competenciasEspecificas" id="competenciasEspecificas" value="checkedValue"/>
+                Tecnología de la Información
+              </label>
             </div>
         </div>
 
         <div className="col-10">
 
         <h1 className="h2">Competencias</h1>
-
-          <section className="row justify-content-around">
-            <div className="col-2">
-              {" "}
-              <button
-                type="button"
-                onClick={() => loadData("all")}
-                class="btn btn-primary btn-lg btn-block"
-              >
-                Todas
-              </button>
-            </div>
-            <div className="col-2">
-              <button
-                type="button"
-                onClick={() => loadData("GeneralCompetence")}
-                class="btn btn-primary btn-lg btn-block"
-              >
-                Generales
-              </button>
-            </div>
-            <div className="col-2">
-              {" "}
-              <button
-                type="button"
-                onClick={() => loadData("SpecificCompetence")}
-                class="btn btn-primary btn-lg btn-block"
-              >
-                Específicas
-              </button>
-            </div>
-            <div className="col-2">
-              <button
-                type="button"
-                onClick={() => loadData("SpecificCompetence")}
-                class="btn btn-primary btn-lg btn-block"
-              >
-                Tecnología de la Información
-              </button>
-            </div>
-          </section>
 
           <section className="row justify-content-center">
             {data ? (
