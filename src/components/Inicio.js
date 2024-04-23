@@ -31,14 +31,18 @@ export const Inicio = () => {
     <div className="bg-dark text-light">
       <div className="card text-center w-100">
         <img className="img" src={HomeBackground} alt="Color azul degradado" />
+
         <div class="card-img-overlay">
           <h1 class="card-title"><strong> Inicio </strong></h1>
-          <div class="form-group justify-content-center">
-            <input type="text" name="username" id="username" class="form-control w-25 " placeholder="Introduzca su nombre..." onChange={updateUserName}/>
+
+          <div class="form-group">
+            <input type="text" name="username" id="username" class="form-control w-25" placeholder="Introduzca su nombre..." onChange={updateUserName}/>
           </div> 
+
           <h1 class="card-title">Bienvenido a mi página web <strong>{userName}</strong></h1>
           <a href="SobreMi" class="btn btn-primary">Sobre mi</a>
         </div>
+
       </div>
 
 

@@ -1,3 +1,12 @@
-.component{
-    
+.card-img-overlay {
+    display: block;
+
+    margin-top: 12rem;
+}
+
+.form-group {
+    margin: 2rem;
+
+    display: flex;
+    justify-content: center;
 }
