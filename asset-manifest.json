@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/juangarciacandon-portfolio/static/css/main.d5289b2f.css",
-    "main.js": "/juangarciacandon-portfolio/static/js/main.0e3cb908.js",
+    "main.css": "/juangarciacandon-portfolio/static/css/main.8bf1a286.css",
+    "main.js": "/juangarciacandon-portfolio/static/js/main.109811a1.js",
     "static/js/453.b5736760.chunk.js": "/juangarciacandon-portfolio/static/js/453.b5736760.chunk.js",
-    "static/media/LogoCard_CompetenciaEspecifica_es.png": "/juangarciacandon-portfolio/static/media/LogoCard_CompetenciaEspecifica_es.0516e497627daf8ce684.png",
+    "static/media/LogoCard_CompetenciaIT_es.png": "/juangarciacandon-portfolio/static/media/LogoCard_CompetenciaIT_es.e87f146b6de596a93ae1.png",
+    "static/media/LogoCard_CompetenciaEspecifica_es.png": "/juangarciacandon-portfolio/static/media/LogoCard_CompetenciaEspecifica_es.d4e0d1cc567e86fd5d8b.png",
     "static/media/LogoCard_CompetenciaGeneral_es.png": "/juangarciacandon-portfolio/static/media/LogoCard_CompetenciaGeneral_es.d5f0a504ca99d1c151e0.png",
-    "static/media/Ico_JuanGarciaCandon.png": "/juangarciacandon-portfolio/static/media/Ico_JuanGarciaCandon.9b7c678c30b4b89bf4a2.png",
     "index.html": "/juangarciacandon-portfolio/index.html",
-    "main.d5289b2f.css.map": "/juangarciacandon-portfolio/static/css/main.d5289b2f.css.map",
-    "main.0e3cb908.js.map": "/juangarciacandon-portfolio/static/js/main.0e3cb908.js.map",
+    "main.8bf1a286.css.map": "/juangarciacandon-portfolio/static/css/main.8bf1a286.css.map",
+    "main.109811a1.js.map": "/juangarciacandon-portfolio/static/js/main.109811a1.js.map",
     "453.b5736760.chunk.js.map": "/juangarciacandon-portfolio/static/js/453.b5736760.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5289b2f.css",
-    "static/js/main.0e3cb908.js"
+    "static/css/main.8bf1a286.css",
+    "static/js/main.109811a1.js"
   ]
 }
