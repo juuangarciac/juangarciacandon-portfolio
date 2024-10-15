@@ -11,8 +11,8 @@ jobs:
       matrix:
         node-version: [ "20.x" ] # Se utilizarág la versión 20.x de Node.js
     steps:
-      - uses: actions/checkout@v2 # Acción para comprobar el repositorio. El agente de ejecucion va a obtener el codigo del repositorio
-      - uses: actions/setup-node@v1 # Acción para configurar Node.js. 
+      - uses: actions/checkout@v4 # Acción para comprobar el repositorio. El agente de ejecucion va a obtener el codigo del repositorio
+      - uses: actions/setup-node@v4 # Acción para configurar Node.js. 
         with:
           node-version: ${{matrix.node-version}} # Se utiliza la versión de Node.js especificada anteriormente
       - name: install packages # Nombre del paso
