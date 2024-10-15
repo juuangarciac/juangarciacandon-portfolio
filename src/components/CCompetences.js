@@ -1,9 +1,10 @@
 import GeneralCompetencesLogo from "../img/LogoCard_CompetenciaGeneral_es.png";
 import SpecificCompetencesLogo from "../img/LogoCard_CompetenciaEspecifica_es.png";
+import ITCompetencesLogo from "../img/LogoCard_CompetenciaIT_es.png";
 import { Competences } from "../data/Competences";
 import { useEffect, useState } from "react";
 
-export const Curriculum = () => {
+export const CCompetences = () => {
   
   const [data, setData] = useState(Competences);
   const [checkBox, setcheckBox] = useState([
@@ -27,7 +28,7 @@ export const Curriculum = () => {
     } else if (competence.name === "SpecificCompetence") {
       return { src: SpecificCompetencesLogo, alt: "Competencia Especifica" };
     } else {
-      return {};
+      return { src: ITCompetencesLogo, alt: "Competencia TIC" };
     }
   };
 
@@ -59,8 +60,6 @@ export const Curriculum = () => {
 
   return (
     <div className="container-fluid">
-      <h1 className="h1">Curriculum</h1>
-
       <section className="row">
 
         <div className="col-2 bg-light">

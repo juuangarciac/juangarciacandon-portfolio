@@ -6,9 +6,9 @@ import { Footer } from '../components/layouts/Footer.js'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import {Inicio} from '../components/Inicio.js'
-import { Curriculum } from '../components/Curriculum.js'
+import { CCompetences } from '../components/CCompetences.js'
 import { Projects } from '../components/Projects.js'
-import { Services } from '../components/Services.js'
+import { AboutMe } from '../components/AboutMe.js'
 import { Contact } from '../components/Contact.js'
 
 export const Approuter = () => {
@@ -19,9 +19,9 @@ export const Approuter = () => {
         
           <Routes>
               <Route path="/" element={<Inicio />} />
-              <Route path="/curriculum" element={<Curriculum />} />
+              <Route path="/curriculum" element={<CCompetences />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/services" element={<Services />} />
+              <Route path="/services" element={<AboutMe />} />
               <Route path="/contact" element={<Contact />} />
           </Routes>
 

@@ -74,5 +74,25 @@ export const Competences = [
     id: "13",
     name: "SpecificCompetence",
     description : "Capacidad para diseñar y evaluar interfaces persona computador que garanticen la accesibilidad y usabilidad a los sistemas, servicios y aplicaciones informáticas."
-  }
+  },
+  {
+    id: "14",
+    name: "ITCompetence",
+    description: "Capacidad para comprender el entorno de una organización y sus necesidades en el ámbito de las tecnologías de la información y las comunicaciones."
+  },
+  {
+    id: "15",
+    name: "ITCompetence",
+    description: "Capacidad para emplear metodologías que aseguren la accesibilidad, ergonomía y usabilidad de los sistemas."
+  },
+  {
+    id: "16",
+    name: "ITCompetence",
+    description: "Capacidad para seleccionar, diseñar, desplegar, integrar y gestionar redes e infraestructuras de comunicaciones en una organización."
+  },
+  {
+    id: "17",
+    name: "ITCompetence",
+    description: "Capacidad para comprender, aplicar y gestionar la garantía y seguridad de los sistemas informáticos."
+  },
 ];

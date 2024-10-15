@@ -8,7 +8,7 @@ export const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container col-6">
           <NavLink className="navbar-brand" to="/">
-            <img src={Logo} alt="Logo" height={'30px'}/>
+            {/*todo */}
           </NavLink>
         </div>
 
@@ -24,18 +24,18 @@ export const Header = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/curriculum">
-                  Curriculum
-                </NavLink>
-              </li>
-              <li className="nav-item">
                 <NavLink className="nav-link" to="/projects">
                   Proyectos
                 </NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link" to="/curriculum">
+                  Competencias
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/services">
-                  Servicios
+                  Sobre Mi
                 </NavLink>
               </li>
               <li className="nav-item">
