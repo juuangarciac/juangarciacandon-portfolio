@@ -19,8 +19,8 @@ jobs:
         run:  npm install # Comando para instalar los paquetes necesarios
       - name: registry github user # Nombre del paso
         run: |
-            git config --global user.email "<email>" # Configura el correo electrónico del usuario de GitHub
-            git config --global user.name "<name>" # Configura el nombre del usuario de GitHub
+            git config --global user.email juangarcandon@gmail.com # Configura el correo electrónico del usuario de GitHub
+            git config --global user.name juuangarciac # Configura el nombre del usuario de GitHub
       - name: deploy the app # Nombre del paso
         run: npm run deploy # Comando para desplegar la aplicación
         env:
