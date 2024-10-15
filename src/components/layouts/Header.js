@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from '../../Ico_JuanGarciaCandon.png'
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {

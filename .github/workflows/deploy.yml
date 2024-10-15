@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest # El trabajo se ejecutará en un corredor con la última versión de Ubuntu
     strategy:
       matrix:
-        node-version: [ "20.x" ] # Se utilizará la versión 20.x de Node.js
+        node-version: [ "20.x" ] # Se utilizarág la versión 20.x de Node.js
     steps:
       - uses: actions/checkout@v2 # Acción para comprobar el repositorio. El agente de ejecucion va a obtener el codigo del repositorio
       - uses: actions/setup-node@v1 # Acción para configurar Node.js. 
