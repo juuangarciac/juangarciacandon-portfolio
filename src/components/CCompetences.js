@@ -2,7 +2,7 @@ import GeneralCompetencesLogo from "../img/LogoCard_CompetenciaGeneral_es.png";
 import SpecificCompetencesLogo from "../img/LogoCard_CompetenciaEspecifica_es.png";
 import ITCompetencesLogo from "../img/LogoCard_CompetenciaIT_es.png";
 import { Competences } from "../data/Competences";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const CCompetences = () => {
   
